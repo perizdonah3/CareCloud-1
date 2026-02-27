@@ -10,5 +10,7 @@ urlpatterns = [
     path('appointment/', views.appointment,name='appointment'),
     path('about/', views.about,name='about'),
     path('show/', views.show,name='show'),
+    path('delete/<int:id>', views.delete ,name='show'),
+    path('edit/<int:id>', views.edit ,name='show'),
 
 ]

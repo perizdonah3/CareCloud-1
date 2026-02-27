@@ -4,7 +4,7 @@
 
     {% block content %}
     <h1 class="text-center">All Appointments</h1>
-    <table class="table table-info container3
+    <table class="table table-info container
 ">
     <tr>
         <th>Name</th>
@@ -14,6 +14,7 @@
         <th>Department</th>
         <th>Doctor</th>
         <th>Message</th>
+        <th>Action</th>
     </tr>
 
     {% for appointment in allappointments %}
@@ -25,6 +26,11 @@
          <td>{{ appointment.department }}</td>
          <td>{{ appointment.doctor }}</td>
          <td>{{ appointment.message }}</td>
+         <td>
+             <a href="/edit/{{ appointment.id }}" class="btn btn-warning">Edit</a>
+             <a href="/delete/{{ appointment.id }}" class="btn btn-success">Delete</a>
+
+         </td>
     </tr>
 
     {% endfor %}
